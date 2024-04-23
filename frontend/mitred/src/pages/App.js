@@ -1,24 +1,22 @@
-import '../styles/App.css';
+import React, { Component } from 'react'
+import Grid from '@mui/joy/Grid';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+  render() {
+    return (
+      <div class="app">
+      <Grid container sx ={{ flexGrow: 1}} direction={"column"} border={'1px solid lime'}>
+
+        <Grid container sx = {{ flexGrow: 1 }} border={'1px solid red'} >
+          Navbar
+        </Grid>
+        <Grid container sx = {{ flexGrow: 1 }} border={'1px solid blue'}>
+          Content
+        </Grid>
+
+      </Grid>
+      </div>
+    )
+  }
 }
-
-export default App;
